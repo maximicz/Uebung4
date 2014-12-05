@@ -26,6 +26,7 @@ public interface Crypter {
 
 	public String encrypt(String message)
 			throws CrypterException;
+	// kommentar
 
 	public List<String> encrypt(List<String> messages)
 			throws CrypterException;
