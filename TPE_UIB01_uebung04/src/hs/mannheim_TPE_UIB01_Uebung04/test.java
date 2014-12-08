@@ -31,6 +31,35 @@ public class test {
 		*/
 		CrypterSubstitution b = new CrypterSubstitution("UFLPWDRASJMCONQYBVTEXHZKGI");
 		
-		System.out.println(b.encrypt("WIKIPEDIAISTINFORMATIV"));
+		//System.out.println(b.encrypt("WIKIPEDIAISTINFORMATIV"));
+		
+		/*List<String> list3 = new ArrayList<String>();
+		list3.add("WIKIPEDIAISTINFORMATIV");
+		list3.add("WIKIPEDIAISTINFORMATIV");
+		System.out.println(b.encrypt(list3));
+		*/
+		
+		/*
+		CrypterSubstitution c = new CrypterSubstitution("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		
+		System.out.println(c.decrypt("ZSMSYWPSUSTESNDQVOUESH"));
+		*/
+	
+		CrypterXOR d = new CrypterXOR("TPERULESTPERULESTPERULESTP");
+		
+		System.out.println(d.encrypt("@ABCDEFGHIJKLMNOPQRSTUVWXYZ[/]^_"));
+		
+		CrypterReverse e = new CrypterReverse();
+		//System.out.println(e.encrypt("Hallo"));
+		//System.out.println(e.decrypt("ollaH"));
+		
+		List<String> list4 = new ArrayList<String>();
+		list4.add("TPERULEZ");
+		list4.add("TPERULEZ");
+		
+		System.out.println(e.decrypt(list4));
+		
+		
+		
 	}	
 }

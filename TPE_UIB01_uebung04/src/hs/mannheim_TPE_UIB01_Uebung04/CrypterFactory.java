@@ -2,12 +2,12 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 
 public class CrypterFactory {
 
-	public void createCrypter(VerschlüsselungsEnum verschlüsselung) throws IllegalKeyException
+	public void createCrypter(VerschlüsselungsEnum verschlüsselung, String key) throws IllegalKeyException
 	{
 		
 		
 			switch(verschlüsselung) {
-				case CAESAR:
+				case CAESAR: CrypterCaesar(key);
 					break;
 					
 				case SUBSTITUTION:
@@ -31,6 +31,6 @@ public class CrypterFactory {
 		
 	
 	
-	}	
+	}
 		
 }
