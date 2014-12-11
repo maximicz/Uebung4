@@ -1,5 +1,6 @@
 package hs.mannheim_TPE_UIB01_Uebung04;
 
+
 /**
  * Eine Factory-Klasse zur Erzeugung von verschiedenen Implementierungsmethoden.
  * In der Factory-Klasse sind ebenfalls die Fehlerbahandlung.
@@ -12,13 +13,20 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 public class CrypterFactory {
 
 	/**
-	 * Creates a new Crypter object.
+	 * Hier wird eine Verschlüsselungsimplementierung zur Verfügung gestellt.
+	 * Mittels switch-case wird anhand des Verschlüsselungsenum die jeweilige
+	 * Implementierung ausgewählt. In jedem Case kann eine IllegalKeyException
+	 * geworfen werden, falls es Fehler beim Schlüssel gibt.
 	 *
-	 * @param verschlüsselung the verschlüsselung
-	 * @param key the key
+	 * @param verschlüsselung
+	 *            the verschlüsselung
+	 * @param key
+	 *            the key
 	 * @return the crypter
-	 * @throws IllegalKeyException the illegal key exception
+	 * @throws IllegalKeyException
+	 *             the illegal key exception
 	 */
+
 	public Crypter createCrypter(VerschlüsselungsEnum verschlüsselung,
 			String key) throws IllegalKeyException {
 
