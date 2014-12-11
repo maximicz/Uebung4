@@ -3,8 +3,17 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Class test.
+ */
 public class test {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws CrypterException the crypter exception
+	 */
 	public static void main(String[] args) throws CrypterException {
 
 		

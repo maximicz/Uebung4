@@ -3,11 +3,24 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 import java.util.Iterator;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class IterableDecrypter.
+ */
 public class IterableDecrypter implements Iterable<String> {
 
+	/** The cypher texte. */
 	Iterable<String> cypherTexte;
+	
+	/** The verschluesselung. */
 	Crypter verschluesselung;
 
+	/**
+	 * Instantiates a new iterable decrypter.
+	 *
+	 * @param cypherTexte the cypher texte
+	 * @param verschluesselung the verschluesselung
+	 */
 	public IterableDecrypter(Iterable<String> cypherTexte,
 			Crypter verschluesselung) {
 
@@ -16,6 +29,9 @@ public class IterableDecrypter implements Iterable<String> {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
