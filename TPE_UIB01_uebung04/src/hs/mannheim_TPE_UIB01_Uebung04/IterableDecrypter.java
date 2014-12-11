@@ -2,14 +2,16 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 
 import java.util.Iterator;
 
-public class IterableCrypter implements Iterable<String> {
 
-	Iterable<String> messages;
+public class IterableDecrypter implements Iterable<String> {
+
+	Iterable<String> cypherTexte;
 	Crypter verschluesselung;
 
-	public IterableCrypter(Iterable<String> messages, Crypter verschluesselung) {
+	public IterableDecrypter(Iterable<String> cypherTexte,
+			Crypter verschluesselung) {
 
-		this.messages = messages;
+		this.cypherTexte = cypherTexte;
 		this.verschluesselung = verschluesselung;
 
 	}
@@ -18,7 +20,7 @@ public class IterableCrypter implements Iterable<String> {
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
 
-			Iterator<String> iterator = messages.iterator();
+			Iterator<String> iterator = cypherTexte.iterator();
 
 			@Override
 			public boolean hasNext() {
@@ -30,9 +32,10 @@ public class IterableCrypter implements Iterable<String> {
 			public String next() {
 
 				try {
-					return verschluesselung.encrypt(iterator.next());
+					return verschluesselung.decrypt(iterator.next());
 				} catch (CrypterException e) {
 
+					System.out.println(e.getMessage());
 					return "";
 				}
 
@@ -46,4 +49,5 @@ public class IterableCrypter implements Iterable<String> {
 
 		};
 	}
+
 }

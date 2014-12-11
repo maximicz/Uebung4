@@ -1,8 +1,12 @@
 package hs.mannheim_TPE_UIB01_Uebung04;
 
-@SuppressWarnings("serial") //Supress Warning oder Serial number?
+@SuppressWarnings("serial")
 public class CrypterException extends Throwable {
 		
+		/**
+	 * 
+	 */
+
 		public CrypterException(){} 
 		 	 
 		 	public CrypterException(String message){ 
@@ -10,9 +14,7 @@ public class CrypterException extends Throwable {
 		 		super(message); 
 
 		
-		//Wo wird die exception gefangen?
-		//Was hier machen?
-		//Syso?
+		
 	}
 	
 

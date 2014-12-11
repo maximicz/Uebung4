@@ -51,7 +51,7 @@ public class CrypterFactory {
 			} else {
 				throw new IllegalKeyException(
 						"Der Schüssel für die XOR-Verschlüsselung"
-								+ "muss einen KEy enthalten");
+								+ "muss einen Key enthalten");
 
 			}
 

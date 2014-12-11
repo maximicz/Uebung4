@@ -15,8 +15,8 @@ public class test {
 		
 		
 		
-		/*
-		CrypterCaesar a = new CrypterCaesar("C");
+		
+		CrypterCaesar a = new CrypterCaesar("Y");
 		
 		System.out.println(a.encrypt("CAESAR"));
 		System.out.println(a.encrypt(list));
@@ -28,7 +28,7 @@ public class test {
 		System.out.println(a.decrypt("FDHVDU"));
 		System.out.println(a.decrypt(list2));
 		
-		*/
+		
 		CrypterSubstitution b = new CrypterSubstitution("UFLPWDRASJMCONQYBVTEXHZKGI");
 		
 		//System.out.println(b.encrypt("WIKIPEDIAISTINFORMATIV"));
@@ -44,10 +44,16 @@ public class test {
 		
 		System.out.println(c.decrypt("ZSMSYWPSUSTESNDQVOUESH"));
 		*/
+		/*
+		String a = "TPERULESTPERULESTPERULESTP";
+		String b1 = "URFVPJB[]ZN^XBJCEBVF@ZRKMJ";
+		CrypterXOR d = new CrypterXOR(a);
 	
-		CrypterXOR d = new CrypterXOR("TPERULESTPERULESTPERULESTP");
 		
-		System.out.println(d.encrypt("@ABCDEFGHIJKLMNOPQRSTUVWXYZ[/]^_"));
+		
+		//'T','P','E','R','U','L','E','S','T','P','E','R','U','L','E','S','T','P','E','R','U','L','E','S','T','P'
+		System.out.println(d.encrypt("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+		System.out.println(d.decrypt(b1));
 		
 		CrypterReverse e = new CrypterReverse();
 		//System.out.println(e.encrypt("Hallo"));
@@ -59,7 +65,7 @@ public class test {
 		
 		System.out.println(e.decrypt(list4));
 		
-		
+		*/
 		
 	}	
 }
