@@ -17,7 +17,7 @@ public class CrypterXOR implements Crypter {
 		char[] encryptedMessage = new char[message2.length];
 	
 		for(int i = 0; i < message2.length; i++) {
-			encryptedMessage[i] = (char) (message2[i] ^ key[i % key.length]);
+			encryptedMessage[i] = (char) ((message2[i] - '@') ^ (this.key[i % this.key.length] - '@'));
 		}
 		
 		return new String(encryptedMessage);
