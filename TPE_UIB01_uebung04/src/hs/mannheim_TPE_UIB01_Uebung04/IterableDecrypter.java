@@ -2,8 +2,6 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 
 import java.util.Iterator;
 
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class IterableDecrypter.
  */
@@ -32,19 +30,17 @@ public class IterableDecrypter implements Iterable<String> {
 	/* (non-Javadoc)
 	 * @see java.lang.Iterable#iterator()
 	 */
-	@Override
+
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
 
 			Iterator<String> iterator = cypherTexte.iterator();
 
-			@Override
 			public boolean hasNext() {
 
 				return iterator.hasNext();
 			}
 
-			@Override
 			public String next() {
 
 				try {
@@ -55,12 +51,6 @@ public class IterableDecrypter implements Iterable<String> {
 					return "";
 				}
 
-			}
-
-			@Override
-			public void remove() {
-				// TODO Auto-generated method stub
-				
 			}
 
 		};

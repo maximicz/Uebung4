@@ -1,6 +1,8 @@
 package hs.mannheim_TPE_UIB01_Uebung04;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * The Class IterableCrypter.
@@ -14,7 +16,7 @@ import java.util.Iterator;
 public class IterableCrypter implements Iterable<String> {
 
 	/** The messages. */
-	Iterable<String> messages;
+	private List <String> messages = new ArrayList<String>();
 	
 	/** The verschluesselung. */
 	Crypter verschluesselung;
@@ -25,7 +27,7 @@ public class IterableCrypter implements Iterable<String> {
 	 * @param messages the messages
 	 * @param verschluesselung the verschluesselung
 	 */
-	public IterableCrypter(Iterable<String> messages, Crypter verschluesselung) {
+	public IterableCrypter(List<String> messages, Crypter verschluesselung) {
 
 		this.messages = messages;
 		this.verschluesselung = verschluesselung;
@@ -41,28 +43,21 @@ public class IterableCrypter implements Iterable<String> {
 
 			Iterator<String> iterator = messages.iterator();
 
-			@Override
 			public boolean hasNext() {
 
 				return iterator.hasNext();
 			}
 
-			@Override
+
 			public String next() {
 
 				try {
 					return verschluesselung.encrypt(iterator.next());
 				} catch (CrypterException e) {
-
+					System.out.println(e.getMessage());
 					return "";
 				}
 
-			}
-
-			@Override
-			public void remove() {
-				// TODO Auto-generated method stub
-				
 			}
 
 		};

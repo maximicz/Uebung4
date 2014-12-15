@@ -83,10 +83,10 @@ public class CrypterSubstitution implements Crypter {
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 
-		String alphabet = "UFLPWDRASJMCONQYBVTEXHZKGI";
-
+		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		
 		for (int i = 0; i < alphabet.length(); ++i) {
-			map.put(alphabet.charAt(i), key.charAt(i));
+			map.put(key.charAt(i), alphabet.charAt(i));
 		}
 
 		String a = new String("");
