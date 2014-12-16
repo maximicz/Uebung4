@@ -11,10 +11,24 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 
 public enum VerschlüsselungsEnum {
 
-	/** The caesar. */
-	CAESAR, /** The substitution. */
-	SUBSTITUTION, /** The reverse. */
-	REVERSE, /** The xor. */
-	XOR, /** The null. */
+	/** The caesar
+	 */
+	CAESAR, 
+	
+	/** The substitution
+	 */
+	
+	SUBSTITUTION, 
+	
+	/** The reverse
+	 */
+	REVERSE, 
+	
+	/** The xor
+	 */
+	XOR, 
+	
+	/** The null
+	 */
 	NULL;
 }

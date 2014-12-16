@@ -11,6 +11,7 @@ import java.util.List;
  * 
  * 
  */
+
 public class IterableDecrypter implements Iterable<String> {
 
 	private List<String> list;
@@ -28,6 +29,7 @@ public class IterableDecrypter implements Iterable<String> {
 	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
 	 *             auftritt.
 	 */
+	
 	public IterableDecrypter(List<String> liste, Crypter crypt)
 			throws CrypterException {
 		this.list = liste;
@@ -46,6 +48,7 @@ public class IterableDecrypter implements Iterable<String> {
 	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
 	 *             auftritt.
 	 */
+	
 	public IterableDecrypter(Iterable<String> iterableCrypt, Crypter crypt)
 			throws CrypterException {
 		list = new LinkedList<String>();
@@ -59,6 +62,7 @@ public class IterableDecrypter implements Iterable<String> {
 	 * Methode, die eine interne anonyme Klasse beinhaltet, zur Implementierung
 	 * des Iterators.
 	 */
+	
 	@Override
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
@@ -79,12 +83,6 @@ public class IterableDecrypter implements Iterable<String> {
 				}
 				return null;
 
-			}
-
-			@Override
-			public void remove() {
-				// TODO Auto-generated method stub
-				
 			}
 		};
 	}

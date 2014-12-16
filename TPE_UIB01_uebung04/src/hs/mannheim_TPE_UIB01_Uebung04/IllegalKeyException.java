@@ -13,15 +13,17 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 public class IllegalKeyException extends CrypterException {
 
 	/**
-	 * Instantiates a new illegal key exception.
+	 * Wirft eine neue illegal key Exception
 	 */
+	
 	public IllegalKeyException(){} 
 	 	 
 	 	/**
-	 	 * Instantiates a new illegal key exception.
+	 	 * Wirft eine neue illegal key Exception
 	 	 *
-	 	 * @param message the message
+	 	 * @param Nachricht der Exception
 	 	 */
+	
 	 	public IllegalKeyException(String message){ 
 	 		 
 	 		super(message); 

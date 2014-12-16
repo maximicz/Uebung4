@@ -21,6 +21,7 @@ public class CrypterNull implements Crypter {
  	 * @return den String selbst 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String encrypt(String message) throws CrypterException {
 		
@@ -36,6 +37,7 @@ public class CrypterNull implements Crypter {
  	 * @return die Liste selbst 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		
@@ -50,6 +52,7 @@ public class CrypterNull implements Crypter {
  	 * @return den String selbst 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 		
@@ -64,6 +67,7 @@ public class CrypterNull implements Crypter {
  	 * @return die Liste selbst 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {

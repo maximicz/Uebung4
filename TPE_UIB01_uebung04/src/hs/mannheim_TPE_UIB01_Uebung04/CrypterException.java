@@ -13,15 +13,15 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 public class CrypterException extends Throwable {
 		
 		/**
-		 * Instantiates a new crypter exception.
+		 * Wirft eine neue Crypter Exception
 		 */
 
 		public CrypterException(){} 
 		 	 
 		 	/**
-	 		 * Instantiates a new crypter exception.
+	 		 * Wirft eine neue Crypter Exception.
 	 		 *
-	 		 * @param message the message
+	 		 * @param Nachricht der Exception
 	 		 */
 	 		public CrypterException(String message){ 
 		 		 

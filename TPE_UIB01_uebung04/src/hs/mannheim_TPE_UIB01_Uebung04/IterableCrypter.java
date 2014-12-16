@@ -12,6 +12,7 @@ import java.util.List;
  * @author Stephen Kessler 1412750
  * @version JDK8.0
  */
+
 /**
  * Diese Klasse legt sich um ein beliebgies anderen Iterable und verschluesselt
  * die Eingabe direkt bei der Iteration. Die Klasse implementiert das Interface
@@ -19,6 +20,7 @@ import java.util.List;
  * 
  * 
  */
+
 public class IterableCrypter implements Iterable<String> {
 
 	private List<String> list;
@@ -36,6 +38,7 @@ public class IterableCrypter implements Iterable<String> {
 	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
 	 *             auftritt.
 	 */
+	
 	public IterableCrypter(List<String> liste, Crypter cryptIn)
 			throws CrypterException {
 		this.list = liste;
@@ -54,6 +57,7 @@ public class IterableCrypter implements Iterable<String> {
 	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
 	 *             auftritt.
 	 */
+	
 	public IterableCrypter(Iterable<String> iterableCrypt, Crypter cryptIn)
 			throws CrypterException {
 		list = new LinkedList<String>();
@@ -67,6 +71,7 @@ public class IterableCrypter implements Iterable<String> {
 	 * Methode, die eine interne anonyme Klasse beinhaltet, zur Implementierung
 	 * des Iterators.
 	 */
+	
 	@Override
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
@@ -89,11 +94,6 @@ public class IterableCrypter implements Iterable<String> {
 
 			}
 
-			@Override
-			public void remove() {
-				// TODO Auto-generated method stub
-				
-			}
 		};
 	}
 

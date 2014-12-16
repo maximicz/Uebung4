@@ -23,6 +23,7 @@ public class CrypterReverse implements Crypter {
  	 * @return String rückwärts 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String encrypt(String message) throws CrypterException {
 		StringBuffer strBuf = new StringBuffer(message);
@@ -37,6 +38,7 @@ public class CrypterReverse implements Crypter {
  	 * @return Liste rückwärts 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		List<String> ergebnis = new LinkedList<String>();
@@ -55,6 +57,7 @@ public class CrypterReverse implements Crypter {
  	 * @return String  
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 		return encrypt(cypherText);
@@ -69,6 +72,7 @@ public class CrypterReverse implements Crypter {
  	 * @return Liste vorwärts 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {

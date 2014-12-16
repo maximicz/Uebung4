@@ -14,14 +14,19 @@ import java.util.List;
 
 public class CrypterXOR implements Crypter {
 
-	/** The key. */
+	/** The key
+	 * 
+	 */
+	
 	private final char[] key;
 	
 	/**
-	 * Instantiates a new crypter xor.
-	 *
-	 * @param key the key
-	 */
+	* Konstruktur um ein XOR Verschluesselungsobjekt mit einem festgelegten
+	* Schluessel zu erzeugen.
+	*
+	* @param key der gewuenschte Schluessel
+	*/
+	
 	public CrypterXOR(String key) {
 
 		this.key = key.toCharArray();
@@ -36,6 +41,7 @@ public class CrypterXOR implements Crypter {
  	 * @return String verschlüsselt 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String encrypt(String message) throws CrypterException {
 
@@ -61,6 +67,7 @@ public class CrypterXOR implements Crypter {
  	 * @return Liste verschlüsselt 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		List<String> ergebnis = new LinkedList<String>();
@@ -78,6 +85,7 @@ public class CrypterXOR implements Crypter {
  	 * @return String verschlüsselt 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 		
@@ -93,6 +101,7 @@ public class CrypterXOR implements Crypter {
  	 * @return Liste unverschlüsselt
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {

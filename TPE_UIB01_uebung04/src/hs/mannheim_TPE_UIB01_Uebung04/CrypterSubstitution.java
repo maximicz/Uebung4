@@ -22,9 +22,14 @@ public class CrypterSubstitution implements Crypter {
 	 * Eine Map, welches den einzelnen Buchstaben auf den jeweiligen Zeichen
 	 * abbildet.
 	 */
+	
 	private Map<Character, Character> map = new HashMap<>();
 
-	/** Der Schlüssel */
+	/** 
+	 * Der Schlüssel 
+	 * 
+	 */
+	
 	private String key;
 
 	/**
@@ -32,9 +37,9 @@ public class CrypterSubstitution implements Crypter {
 	 * Ein Schlüssel für die CrypterSubstitution wird in diesem Konstruktor
 	 * erzeugt.
 	 *
-	 * @param key
-	 *            der Schlüssel
+	 * @param key der Schlüssel
 	 */
+	
 	public CrypterSubstitution(String key) {
 		this.key = key;
 	}
@@ -47,6 +52,7 @@ public class CrypterSubstitution implements Crypter {
  	 * @return String verschlüsselt 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String encrypt(String message) throws CrypterException {
 
@@ -73,6 +79,7 @@ public class CrypterSubstitution implements Crypter {
  	 * @return Liste verschlüsselt 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		List<String> ergebnis = new LinkedList<String>();
@@ -90,6 +97,7 @@ public class CrypterSubstitution implements Crypter {
  	 * @return String entschlüsselt
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 
@@ -115,6 +123,7 @@ public class CrypterSubstitution implements Crypter {
  	 * @return Liste unverschlüsselt
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {
