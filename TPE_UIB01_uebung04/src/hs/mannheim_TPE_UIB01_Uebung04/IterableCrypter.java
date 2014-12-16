@@ -1,7 +1,7 @@
 package hs.mannheim_TPE_UIB01_Uebung04;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -12,54 +12,89 @@ import java.util.List;
  * @author Stephen Kessler 1412750
  * @version JDK8.0
  */
-
+/**
+ * Diese Klasse legt sich um ein beliebgies anderen Iterable und verschluesselt
+ * die Eingabe direkt bei der Iteration. Die Klasse implementiert das Interface
+ * Iterable<String>.
+ * 
+ * 
+ */
 public class IterableCrypter implements Iterable<String> {
 
-	/** The messages. */
-	private List <String> messages = new ArrayList<String>();
-	
-	/** The verschluesselung. */
-	Crypter verschluesselung;
+	private List<String> list;
+	private Crypter crypt;
 
 	/**
-	 * Instantiates a new iterable crypter.
-	 *
-	 * @param messages the messages
-	 * @param verschluesselung the verschluesselung
+	 * Konstrukor um ein Objekt der Klasse IterableCrypter zu erzeugen. Hierzu
+	 * wird eine Liste, sowie eine Verschluesselungsart angegeben.
+	 * 
+	 * @param liste
+	 *            Die Liste
+	 * @param cryptIn
+	 *            die Verschluesselungsart
+	 * @throws CrypterException
+	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
+	 *             auftritt.
 	 */
-	public IterableCrypter(List<String> messages, Crypter verschluesselung) {
-
-		this.messages = messages;
-		this.verschluesselung = verschluesselung;
-
+	public IterableCrypter(List<String> liste, Crypter cryptIn)
+			throws CrypterException {
+		this.list = liste;
+		this.crypt = cryptIn;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Iterable#iterator()
+	/**
+	 * Konstrukor um ein Objekt der Klasse IterableCrypter zu erzeugen. Hierzu
+	 * ein Iterable, sowie eine Verschluesselungsart angegeben.
+	 * 
+	 * @param iterableCrypt
+	 *            das Iterabl
+	 * @param cryptIn
+	 *            die Verschluesselungsart
+	 * @throws CrypterException
+	 *             Wird geworfen, falls bei der Verschluesselung ein Fehler
+	 *             auftritt.
+	 */
+	public IterableCrypter(Iterable<String> iterableCrypt, Crypter cryptIn)
+			throws CrypterException {
+		list = new LinkedList<String>();
+		for (String str : iterableCrypt) {
+			list.add(str);
+		}
+		this.crypt = cryptIn;
+	}
+
+	/**
+	 * Methode, die eine interne anonyme Klasse beinhaltet, zur Implementierung
+	 * des Iterators.
 	 */
 	@Override
 	public Iterator<String> iterator() {
 		return new Iterator<String>() {
 
-			Iterator<String> iterator = messages.iterator();
+			private int pos = 0;
 
+			@Override
 			public boolean hasNext() {
-
-				return iterator.hasNext();
+				return (pos < list.size());
 			}
 
-
+			@Override
 			public String next() {
-
 				try {
-					return verschluesselung.encrypt(iterator.next());
+					return crypt.encrypt(list.get(pos++));
 				} catch (CrypterException e) {
 					System.out.println(e.getMessage());
-					return "";
 				}
+				return null;
 
 			}
 
+			@Override
+			public void remove() {
+				// TODO Auto-generated method stub
+				
+			}
 		};
 	}
+
 }
