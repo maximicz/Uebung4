@@ -2,7 +2,7 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 
 import java.util.List;
 
-// TODO: Auto-generated Javadoc
+
 /**
  *
  Grundlegendes Interface , um Verschlusselung durchzufuhren . Mit

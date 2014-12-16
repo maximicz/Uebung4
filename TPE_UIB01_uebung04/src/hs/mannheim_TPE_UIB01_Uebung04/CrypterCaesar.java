@@ -15,6 +15,7 @@ import java.util.List;
 public class CrypterCaesar implements Crypter {
 
 	/** Das Schlüsselattribut */
+	
 	private String key;
 
 	/**
@@ -27,12 +28,17 @@ public class CrypterCaesar implements Crypter {
 
 		this.key = key;
 	}
+/** 
+ 	 * Methode, die für eine uebergebene Nachricht die Verschiebungszahl erzeugt 
+ 	 * und eine Ausnahme des Typs "CrypterException" wirft. Die Nachricht und  
+ 	 * die Verschiebungsziffer werden an eine private, interne ecrypt Methode  
+ 	 * weitergeleitet. Dabei greifen wir aus die ASCII Tabelle zu.
+ 	 *  
+ 	 * @param message die zu verschluesselnde Nachricht 
+ 	 * @return der verschluesselte Text 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
+ 	 */ 
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.lang.String)
-	 */
 	
 	@Override
 	public String encrypt(String message) throws CrypterException {
@@ -58,11 +64,15 @@ public class CrypterCaesar implements Crypter {
 
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Diese Methode macht das selbe wie die encrypt Methode, 
+	 * nur wird dieses mal eine Liste verwendet.
 	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.util.List)
+	 * @param Liste der Elemente 
+ 	 * @return die verschluesselte Liste 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
+	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		List<String> ergebnis = new LinkedList<String>();
@@ -72,11 +82,7 @@ public class CrypterCaesar implements Crypter {
 		return ergebnis;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.lang.String)
-	 */
+	
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 
@@ -103,11 +109,7 @@ public class CrypterCaesar implements Crypter {
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.util.List)
-	 */
+	
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {
