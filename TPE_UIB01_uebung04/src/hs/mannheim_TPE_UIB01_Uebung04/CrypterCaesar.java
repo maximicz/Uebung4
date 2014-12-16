@@ -69,10 +69,9 @@ public class CrypterCaesar implements Crypter {
 	 * nur wird dieses mal eine Liste verwendet.
 	 * 
 	 * @param Liste der Elemente 
- 	 * @return die verschluesselte Liste 
+ 	 * @return die unverschluesselte Liste 
  	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
-	
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
 		List<String> ergebnis = new LinkedList<String>();
@@ -82,7 +81,14 @@ public class CrypterCaesar implements Crypter {
 		return ergebnis;
 	}
 
-	
+	/**
+	 * Diese Methode kann mit Hilfe der ASCII Tabelle einen verschlüsselten Code
+	 * entschlüsseln
+	 * 
+	 * @param Verschlüsselter Text 
+ 	 * @return unschlüsselter Text 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
+	 */
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 
@@ -110,6 +116,14 @@ public class CrypterCaesar implements Crypter {
 	}
 
 	
+	/**
+	 * Diese Methode macht das selbe wie die decrypt Methode, 
+	 * nur wird dieses mal eine Liste verwendet.
+	 * 
+	 * @param Verschlüsselte Liste der Elemente 
+ 	 * @return die unverschluesselte Liste 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
+	 */
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
 			throws CrypterException {

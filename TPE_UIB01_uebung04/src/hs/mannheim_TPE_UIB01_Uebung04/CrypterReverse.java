@@ -15,8 +15,13 @@ import java.util.List;
 public class CrypterReverse implements Crypter {
 
 	
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.lang.String)
+	/**
+	 *Diese Methode verdreht die Reihenfolge der Buchstaben, sodass der Text 
+	 *rückwärts geschrieben wird
+	 * 
+	 * @param String 
+ 	 * @return String rückwärts 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String encrypt(String message) throws CrypterException {
@@ -24,8 +29,13 @@ public class CrypterReverse implements Crypter {
 		return strBuf.reverse().toString();
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.util.List)
+	/**
+	 *Diese Methode gibt die Strings einzeln an die Ecrypt Methode, sodass der 
+	 *Text rückwärts geschrieben wird
+	 * 
+	 * @param Liste 
+ 	 * @return Liste rückwärts 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
@@ -36,16 +46,28 @@ public class CrypterReverse implements Crypter {
 		return ergebnis;
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.lang.String)
+	/**
+	 *Diese Methode gibt den String an die Encrypt Methode weiter, diese verdreht
+	 * die Reihenfolge der Buchstaben, sodass der Text 
+	 *vorwärts geschrieben wird
+	 * 
+	 * @param String rückwärts 
+ 	 * @return String  
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
 		return encrypt(cypherText);
 	}
-
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.util.List)
+	
+	/**
+	 *Diese Methode gibt die Strings einzeln an die encrypt Methode, diese 
+	 *verdreht die Reihenfolge der Buchstaben, sodass der Text 
+	 *vorwärts geschrieben wird
+	 * 
+	 * @param Liste Rückwärts 
+ 	 * @return Liste vorwärts 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)

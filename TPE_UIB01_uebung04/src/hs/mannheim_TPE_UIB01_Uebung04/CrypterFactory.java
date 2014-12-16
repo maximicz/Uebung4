@@ -13,18 +13,17 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 public class CrypterFactory {
 
 	/**
-	 * Hier wird eine Verschlüsselungsimplementierung zur Verfügung gestellt.
+	 * 
 	 * Mittels switch-case wird anhand des Verschlüsselungsenum die jeweilige
-	 * Implementierung ausgewählt. In jedem Case kann eine IllegalKeyException
-	 * geworfen werden, falls es Fehler beim Schlüssel gibt.
+	 * Implementierung ausgewählt und ein Crypter Objekt erstellt. In jedem Case 
+	 * kann eine IllegalKeyException geworfen werden, falls es Fehler beim 
+	 * Schlüssel gibt.
 	 *
-	 * @param verschlüsselung
-	 *            the verschlüsselung
+	 * @param verschlüsselungEnum
 	 * @param key
-	 *            the key
-	 * @return the crypter
+	 * @return new crypter
 	 * @throws IllegalKeyException
-	 *             the illegal key exception
+	 *             
 	 */
 
 	public Crypter createCrypter(VerschlüsselungsEnum verschlüsselung,

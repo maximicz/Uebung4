@@ -28,8 +28,13 @@ public class CrypterXOR implements Crypter {
 
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.lang.String)
+	/**
+	 *Diese Methode verschlüsselt die Nachricht, indem es die Einzelnen Zeichen 
+	 *per XOR verbindet.
+	 * 
+	 * @param String 
+ 	 * @return String verschlüsselt 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String encrypt(String message) throws CrypterException {
@@ -47,8 +52,14 @@ public class CrypterXOR implements Crypter {
 		return String.valueOf(chars);
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.util.List)
+	/**
+	 *Diese Methode ruft mit einzelnen Strings die encrypt Methode auf und 
+	 *verschlüsselt die Nachricht, indem es die Einzelnen Zeichen 
+	 *per XOR verbindet.
+	 * 
+	 * @param Liste 
+ 	 * @return Liste verschlüsselt 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
@@ -59,8 +70,13 @@ public class CrypterXOR implements Crypter {
 		return ergebnis;
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.lang.String)
+	/**
+	 *Diese Methode entschlüsselt die Nachricht, indem es die Einzelnen Zeichen 
+	 *per XOR verbindet und somit den unverschlüsselten Text erhält.
+	 * 
+	 * @param String 
+ 	 * @return String verschlüsselt 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
@@ -68,8 +84,14 @@ public class CrypterXOR implements Crypter {
 		return encrypt(cypherText);
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.util.List)
+	/**
+	 *Diese Methode entschlüsselt die Liste, indem es mit einzelnen Strings die 
+	 *decrypt methode aufruft, die die Einzelnen Zeichen 
+	 *per XOR verbindet und somit den unverschlüsselten Text zurückliefert.
+	 * 
+	 * @param Liste verschlüsselt
+ 	 * @return Liste unverschlüsselt
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)

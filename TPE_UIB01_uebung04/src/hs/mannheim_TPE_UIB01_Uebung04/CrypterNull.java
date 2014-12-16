@@ -13,8 +13,13 @@ import java.util.List;
 
 public class CrypterNull implements Crypter {
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.lang.String)
+	/**
+	 *Diese Methode gibt den String direkt wieder zurück, da keine Verschlüsselung
+	 *stattfindet
+	 * 
+	 * @param String 
+ 	 * @return den String selbst 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String encrypt(String message) throws CrypterException {
@@ -22,8 +27,14 @@ public class CrypterNull implements Crypter {
 		return message;
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.util.List)
+	
+	/**
+	 *Diese Methode gibt die Liste direkt wieder zurück, da keine Verschlüsselung
+	 *stattfindet
+	 * 
+	 * @param Liste 
+ 	 * @return die Liste selbst 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
@@ -31,8 +42,13 @@ public class CrypterNull implements Crypter {
 		return messages;
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.lang.String)
+	/**
+	 *Diese Methode gibt den String direkt wieder zurück, da keine Entschlüsselung
+	 *stattfindet
+	 * 
+	 * @param String 
+ 	 * @return den String selbst 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
@@ -40,8 +56,13 @@ public class CrypterNull implements Crypter {
 		return cypherText;
 	}
 
-	/* (non-Javadoc)
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.util.List)
+	/**
+	 *Diese Methode gibt die Liste direkt wieder zurück, da keine Entschlüsselung
+	 *stattfindet
+	 * 
+	 * @param Liste 
+ 	 * @return die Liste selbst 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)

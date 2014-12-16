@@ -28,6 +28,7 @@ public class CrypterSubstitution implements Crypter {
 	private String key;
 
 	/**
+	 * Konstruktor
 	 * Ein Schlüssel für die CrypterSubstitution wird in diesem Konstruktor
 	 * erzeugt.
 	 *
@@ -38,10 +39,13 @@ public class CrypterSubstitution implements Crypter {
 		this.key = key;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 *Diese Methode ersetzt das normale Alphabet durch den übergegeben Schlüssel
+	 *und verschlüsselt dadurch die Nachricht
 	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.lang.String)
+	 * @param String 
+ 	 * @return String verschlüsselt 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String encrypt(String message) throws CrypterException {
@@ -61,10 +65,13 @@ public class CrypterSubstitution implements Crypter {
 
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 *Diese Methode ersetzt das normale Alphabet durch den übergegeben Schlüssel
+	 *und verschlüsselt dadurch die Nachricht
 	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#encrypt(java.util.List)
+	 * @param Liste
+ 	 * @return Liste verschlüsselt 
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> encrypt(List<String> messages) throws CrypterException {
@@ -75,10 +82,13 @@ public class CrypterSubstitution implements Crypter {
 		return ergebnis;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 *Diese Methode ersetzt das normale Alphabet durch den übergegeben Schlüssel
+	 *und entverschlüsselt dadurch die Nachricht
 	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.lang.String)
+	 * @param String verschlüsselt
+ 	 * @return String entschlüsselt
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
@@ -97,10 +107,13 @@ public class CrypterSubstitution implements Crypter {
 		return a;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 *Diese Methode ersetzt das normale Alphabet durch den übergegeben Schlüssel
+	 *und entschlüsselt dadurch die Nachricht
 	 * 
-	 * @see hs.mannheim_TPE_UIB01_Uebung04.Crypter#decrypt(java.util.List)
+	 * @param Liste verschlüsselt 
+ 	 * @return Liste unverschlüsselt
+ 	 * @throws CrypterException ein Fehler bei der Verschluesselung tritt auf 
 	 */
 	@Override
 	public List<String> decrypt(List<String> cypherTexte)
