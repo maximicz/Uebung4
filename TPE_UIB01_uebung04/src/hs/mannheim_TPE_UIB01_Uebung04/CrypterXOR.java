@@ -44,7 +44,12 @@ public class CrypterXOR implements Crypter {
 	
 	@Override
 	public String encrypt(String message) throws CrypterException {
-
+		
+		
+		if(!checkMessage(message)){ 
+			 			throw new CrypterException("Ungültige Zeichen in der Nachricht"); 
+		}
+		else {
 		message = message.replaceAll("[^@-_]", "");
 
 		char[] chars = message.toCharArray();
@@ -56,6 +61,7 @@ public class CrypterXOR implements Crypter {
 		}
 
 		return String.valueOf(chars);
+		}
 	}
 
 	/**
@@ -111,4 +117,14 @@ public class CrypterXOR implements Crypter {
 		}
 		return ergebnis;
 	}
+	
+	public boolean checkMessage(String message){ 
+ 		message = message.toUpperCase(); 
+ 		for(int i = 0; i < message.length(); i++){ 
+ 			if(message.charAt(i) >= 64 || message.charAt(i) <= 95){ 
+ 				return true; 
+ 			} 
+ 		} 
+ 		return false; 
+}
 }

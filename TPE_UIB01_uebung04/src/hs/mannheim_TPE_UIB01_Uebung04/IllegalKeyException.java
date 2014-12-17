@@ -12,13 +12,7 @@ package hs.mannheim_TPE_UIB01_Uebung04;
 @SuppressWarnings("serial")
 public class IllegalKeyException extends CrypterException {
 
-	/**
-	 * Wirft eine neue illegal key Exception
-	 */
-	
-	public IllegalKeyException(){} 
-	 	 
-	 	/**
+		/**
 	 	 * Wirft eine neue illegal key Exception
 	 	 *
 	 	 * @param Nachricht der Exception

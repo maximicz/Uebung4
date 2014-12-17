@@ -1,6 +1,5 @@
 package hs.mannheim_TPE_UIB01_Uebung04;
 
-
 /**
  * Eine Factory-Klasse zur Erzeugung von verschiedenen Implementierungsmethoden.
  * In der Factory-Klasse sind ebenfalls die Fehlerbahandlung.
@@ -15,15 +14,15 @@ public class CrypterFactory {
 	/**
 	 * 
 	 * Mittels switch-case wird anhand des Verschlüsselungsenum die jeweilige
-	 * Implementierung ausgewählt und ein Crypter Objekt erstellt. In jedem Case 
-	 * kann eine IllegalKeyException geworfen werden, falls es Fehler beim 
+	 * Implementierung ausgewählt und ein Crypter Objekt erstellt. In jedem Case
+	 * kann eine IllegalKeyException geworfen werden, falls es Fehler beim
 	 * Schlüssel gibt.
 	 *
 	 * @param verschlüsselungEnum
 	 * @param key
 	 * @return new crypter
 	 * @throws IllegalKeyException
-	 *             
+	 * 
 	 */
 
 	public Crypter createCrypter(VerschlüsselungsEnum verschlüsselung,
@@ -63,22 +62,23 @@ public class CrypterFactory {
 		case REVERSE:
 
 			newCrypter = new CrypterReverse();
-
 			break;
 
 		case XOR:
+			for (int i = 0; i < key.length(); i++) {
+				if (key.charAt(i) >= 65 || key.charAt(i) <= 90)
 
-			if (key.length() > 0) {
+				{
 
-				newCrypter = new CrypterXOR(key);
+					newCrypter = new CrypterXOR(key);
 
-			} else {
-				throw new IllegalKeyException(
-						"Der Schüssel für die XOR-Verschlüsselung"
-								+ "muss einen Key enthalten");
+				} else {
+					throw new IllegalKeyException(
+							"Der Schüssel für die XOR-Verschlüsselung"
+									+ "muss einen Key enthalten");
 
+				}
 			}
-
 			break;
 
 		case NULL:
